@@ -2,11 +2,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- App name for debug and release flavors -->
-    <string name="app_name_release" tools:ignore="UnusedResources">Music Player GO</string>
-    <string name="app_name_debug" tools:ignore="UnusedResources">MPGO debug</string>
+    <string name="app_name_release" tools:ignore="UnusedResources">Music Player Prime</string>
+    <string name="app_name_debug" tools:ignore="UnusedResources">PRIMEGO debug</string>
 
     <!-- External links -->
-    <string name="app_git">https://github.com/enricocid/Music-Player-GO</string>
+    <string name="app_git">https://github.com/Apechi/primeplayer</string>
 
     <!-- Formatted strings used in RVs items and other TextViews -->
     <string name="duration_artist_date_added">%1s, %2s, %3s</string>

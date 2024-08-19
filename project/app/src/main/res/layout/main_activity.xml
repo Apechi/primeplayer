@@ -34,8 +34,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </FrameLayout>
-
         <!-- CONTROLS PANEL -->
         <include layout="@layout/player_controls_panel" />
+
+        <RelativeLayout
+            android:id="@+id/layads"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/blue_grey"
+            />
     </LinearLayout>
 </FrameLayout>

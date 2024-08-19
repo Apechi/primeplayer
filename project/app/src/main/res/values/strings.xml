@@ -81,9 +81,9 @@
     <string name="error_builtin_eq">An error occurred! Use the system equalizer (if it exists)!</string>
     <string name="error_sys_eq">System equalizer not available!</string>
     <string name="error_fs_not_allowed_sum">Error! Turn off battery optimization for MPGO</string>
-    <string name="error_fs_not_allowed">Something went wrong! :( Consider turning off battery optimization in the system settings: Apps &gt; All apps &gt; Music Player GO &gt; Battery &gt; Unrestricted, as it could cause the media player service to stop.</string>
+    <string name="error_fs_not_allowed">Something went wrong! :( Consider turning off battery optimization in the system settings: Apps &gt; All apps &gt; Prime GO Player &gt; Battery &gt; Unrestricted, as it could cause the media player service to stop.</string>
     <!-- Messages - Permission rationale -->
-    <string name="perm_rationale">Grant Music Player GO access to your files to play music.</string>
+    <string name="perm_rationale">Grant Prime GO Player access to your files to play music.</string>
     <!-- Messages - Repeat -->
     <string name="repeat_enabled">Single repetition on.</string>
     <string name="repeat_loop_enabled">∞ repeat on.</string>
@@ -219,7 +219,7 @@
     <string name="blue_grey">Blue grey</string>
 
 
-<!--    change later-->
+    <!--    change later-->
     <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
     <string name="sdk_key_applovin" translatable="false">T7PPns0K6JV00uGv0ZAEKsTWrpwA-N4Hchi_KKecaqTa_U5zQcyyoI_pTcC5TM1OgfrLz5dWGdASKWgK6l5Sks</string>
 

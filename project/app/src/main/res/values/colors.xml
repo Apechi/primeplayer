@@ -29,4 +29,5 @@
 
     <color name="main_bg">#fcfcfc</color>
     <color name="toolbar_bg">@color/main_bg</color>
+    <color name="album_bg">#A1FCFCFC</color>
 </resources>

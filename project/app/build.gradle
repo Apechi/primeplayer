@@ -6,7 +6,7 @@ android {
     compileSdkVersion 35
     //noinspection GradleDependency
     defaultConfig {
-        applicationId "com.iven.musicplayergo"
+        applicationId "com.theprime.primegoplayer"
         minSdkVersion 21
         targetSdkVersion 35
         versionCode 187
@@ -21,6 +21,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig true
         viewBinding true
     }
 
@@ -71,7 +72,7 @@ android {
     }
 
 
-    namespace 'com.iven.musicplayergo'
+    namespace 'com.theprime.primegoplayer'
     lint {
         disable 'MissingTranslation', 'AllowBackup', 'GoogleAppIndexingWarning'
     }
@@ -102,6 +103,9 @@ dependencies {
 // Third-party
     //https://mvnrepository.com/artifact/com.squareup.moshi/moshi-kotlin
     implementation 'com.squareup.moshi:moshi:1.15.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.activity:activity:1.9.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.15.0'
 
     //https://github.com/zhanghai/AndroidFastScroll/releases
