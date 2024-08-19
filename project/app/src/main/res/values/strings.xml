@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Dialogs / Buttons -->
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
@@ -218,6 +218,9 @@
     <string name="grey">Grey</string>
     <string name="blue_grey">Blue grey</string>
 
+
+    <string name="app_name_release" tools:ignore="UnusedResources">Music Player Prime</string>
+    <string name="app_name_debug" tools:ignore="UnusedResources">PRIMEGO debug</string>
 
     <!--    change later-->
     <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
