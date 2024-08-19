@@ -3,9 +3,10 @@ package com.iven.musicplayergo
 import android.support.v4.media.session.PlaybackStateCompat
 
 
-object GoConstants {
+object  GoConstants {
 
     const val PERMISSION_REQUEST_READ_EXTERNAL_STORAGE = 2588
+    const val PERMISSION_REQUEST_POST_NOTIFICATIONS = 2589
     const val LAUNCHED_BY_TILE = "LAUNCHED_BY_TILE"
 
     // active fragments

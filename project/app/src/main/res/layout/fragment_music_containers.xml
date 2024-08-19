@@ -25,5 +25,7 @@
         android:layout_height="match_parent"
         android:overScrollMode="never"
         android:scrollbars="none"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        app:spanCount="2"
+
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
 </LinearLayout>

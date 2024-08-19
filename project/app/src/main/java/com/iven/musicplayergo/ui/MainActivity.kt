@@ -230,14 +230,14 @@ class MainActivity : BaseActivity(), UIControlInterface, MediaControlInterface {
     // Manage request permission result
     override fun onRequestPermissionsResult(
         requestCode: Int,
-        permissions: Array<String>, grantResults: IntArray
+        permissions: Array<String>,
+        grantResults: IntArray
     ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (Versioning.isMarshmallow()) {
-            super.onRequestPermissionsResult(requestCode, permissions, grantResults)
             when (requestCode) {
                 GoConstants.PERMISSION_REQUEST_READ_EXTERNAL_STORAGE -> {
-                    // If request is cancelled, the result arrays are empty.
-                    if ((grantResults.isNotEmpty() && grantResults.first() != PackageManager.PERMISSION_GRANTED)) {
+                    if (grantResults.isNotEmpty() && grantResults.first() != PackageManager.PERMISSION_GRANTED) {
                         // Permission denied, boo! Error!
                         notifyError(GoConstants.TAG_NO_PERMISSION)
                         return
@@ -245,9 +245,19 @@ class MainActivity : BaseActivity(), UIControlInterface, MediaControlInterface {
                     // Permission was granted, yay! Do bind service
                     doBindService()
                 }
+                GoConstants.PERMISSION_REQUEST_POST_NOTIFICATIONS -> {
+                    if (grantResults.isNotEmpty() && grantResults.first() != PackageManager.PERMISSION_GRANTED) {
+                        // Permission denied for notifications
+                        notifyError(GoConstants.TAG_NO_PERMISSION)
+                        return
+                    }
+                    // Permission was granted, recreate notifications
+//                    createNotificationForError(this)
+                }
             }
         }
     }
+
 
     override fun onDenyPermission() {
         notifyError(GoConstants.TAG_NO_PERMISSION)
@@ -702,7 +712,7 @@ class MainActivity : BaseActivity(), UIControlInterface, MediaControlInterface {
                 with(mPlayerService) {
                     if (isRestoredFromPause) {
                         ServiceCompat.stopForeground(mPlayerService, ServiceCompat.STOP_FOREGROUND_DETACH)
-                        musicNotificationManager.updateNotification()
+                        musicNotificationManager.updateNotification(this)
                         isRestoredFromPause = false
                     }
                 }

@@ -215,7 +215,7 @@ class MediaPlayerHolder:
                     true
                 } catch (fsNotAllowed: ForegroundServiceStartNotAllowedException) {
                     synchronized(pauseMediaPlayer()) {
-                        mMusicNotificationManager?.createNotificationForError()
+                        mMusicNotificationManager?.createNotificationForError(this.mPlayerService)
                     }
                     fsNotAllowed.printStackTrace()
                     false
@@ -313,7 +313,7 @@ class MediaPlayerHolder:
                         mMusicNotificationManager?.run {
                             updatePlayPauseAction()
                             updateNotificationContent {
-                                updateNotification()
+                                updateNotification(mPlayerService)
                             }
                         }
                     }
@@ -467,7 +467,7 @@ class MediaPlayerHolder:
         updatePlaybackStatus(updateUI = true)
         mMusicNotificationManager?.run {
             updatePlayPauseAction()
-            updateNotification()
+            updateNotification(mPlayerService)
         }
         if (::mediaPlayerInterface.isInitialized && !isCurrentSongFM) {
             mediaPlayerInterface.onBackupSong()
