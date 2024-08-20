@@ -30,11 +30,12 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            resValue "string", "app_name", "@donottranslate/app_name_release"
+            resValue "string", "app_name", "Prime Go Player"
+            signingConfig signingConfigs.debug
         }
         debug {
             applicationIdSuffix ".debug"
-            resValue "string", "app_name", "@donottranslate/app_name_debug"
+            resValue "string", "app_name", "PRIMEGO debug"
             debuggable true
         }
     }
